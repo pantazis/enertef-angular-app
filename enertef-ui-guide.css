@@ -55,7 +55,7 @@ body { margin: 0; }
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: var(--s-1);
   background: var(--brand-fg);
   border-bottom: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 2px 8px rgba(0,0,0,.06);

@@ -33,6 +33,7 @@
   /* radii */
   --r-md: 12px;
   --r-lg: 16px;
+  --nav-height: 60px;
 }
 
 html, body {
@@ -50,12 +51,13 @@ body { margin: 0; }
 /* ===============================================================
    Top Bar Styles
    =============================================================== */
+
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: var(--nav-height);
   background: var(--brand-fg);
   border-bottom: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 2px 8px rgba(0,0,0,.06);
@@ -373,10 +375,17 @@ a:hover { text-decoration: underline; }
 }
 .nav a:hover{ background: rgba(0,0,0,.06); }
 
-.content{
-  padding: var(--s-6);
-  display:grid; grid-template-columns: 1fr; gap: var(--s-6);
-  background: rgba(0,0,0,0.03);
+.content {
+	padding: var(--s-6);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--s-6);
+	background: rgba(0, 0, 0, 0.03);
+	justify-content: space-between;
+	align-content: space-between;
+	min-height: calc(100% - var(--nav-height));
+	height: fit-content;
+	box-sizing: border-box;
 }
 
 /* Responsive Grid System */
@@ -441,3 +450,13 @@ th{ font-weight: 500; }
 .pill--open{ color:#0b6; border-color:#0b6; background:rgba(0,187,102,.08); }
 .pill--assigned{ color:#06b; border-color:#06b; background:rgba(0,102,187,.08); }
 .pill--closed{ color:#b00; border-color:#b00; background:rgba(187,0,0,.08); }
+
+.h-03 + .section-grid {
+	margin-top: var(--s-4);
+}
+section + section {
+	margin-top: var(--s-6);
+}
+.btn + .btn {
+	margin-left: var(--s-1);
+}
