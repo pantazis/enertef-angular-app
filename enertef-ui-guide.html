@@ -7,14 +7,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="enertef-ui-guide.css">
 </head>
 <body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-content">
+      <div class="topbar-brand">
+        <img src="img/Logo NB.png" alt="EnerTEF Logo" class="brand-logo" />
+        
+      </div>
+      
+      <!-- User Actions - Logged Out State -->
+      <div class="topbar-actions" id="logged-out-actions">
+        <button class="btn btn--ghost btn--sm" onclick="showLogin()">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <button class="btn btn--primary btn--sm" onclick="showRegister()">
+          <i class="fas fa-user-plus"></i> Register
+        </button>
+      </div>
+      
+      <!-- User Actions - Logged In State (hidden by default) -->
+      <div class="topbar-actions" id="logged-in-actions" style="display: none;">
+        <div class="user-menu">
+          <button class="user-menu-toggle" onclick="toggleUserMenu()">
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <span class="user-name">John Doe</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="user-dropdown" id="user-dropdown">
+            <a href="#profile" class="dropdown-item">
+              <i class="fas fa-user-circle"></i> Profile
+            </a>
+            <a href="#settings" class="dropdown-item">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="#notifications" class="dropdown-item">
+              <i class="fas fa-bell"></i> Notifications
+              <span class="notification-badge">3</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#logout" class="dropdown-item text-danger" onclick="logout()">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  
   <div class="layout">
     <!-- Left Menu (from mockups structure) -->
     <aside class="sidebar">
       <div class="brand">
-        <div class="symbol" aria-hidden="true"></div>
+       
         <div>
           <div class="h-04" style="margin:0;">EnerTEF</div>
           <div class="c-01 text-dark" style="opacity:.75">Portal</div>
