@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnerTEF UI Guide – One Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="enertef-ui-guide.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Left Menu (from mockups structure) -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="symbol" aria-hidden="true"></div>
+        <div>
+          <div class="h-04" style="margin:0;">EnerTEF</div>
+          <div class="c-01 text-dark" style="opacity:.75">Portal</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#typography">Typography</a>
+        <a href="#colors">Colors</a>
+        <a href="#auth">Auth (Login / Register)</a>
+        <a href="#requests">Service Requests</a>
+        <a href="#proposals">Service Proposals</a>
+        <a href="#experiments">Experiments</a>
+        <a href="#resources">Resource Monitoring</a>
+        <a href="#payments">Payments</a>
+        <a href="#components">Components (Buttons / Inputs)</a>
+        <a href="#grid">Grid System</a>
+      </nav>
+    </aside>
+
+    <!-- Right Content -->
+    <main class="content">
+      <!-- Hero -->
+      <section class="card">
+        <div class="h-03">The Future of Energy through AI Testing and Experimentation</div>
+        <p class="b-02 mt-3">This is a one-page developer guide demonstrating EnerTEF brand rules using CSS Grid, a left navigation menu, two-column content sections, full typography scale, and typical portal forms and components from the mockups.</p>
+        <div class="mt-4">
+          <a class="btn btn--primary" href="#components">Primary Action</a>
+          <a class="btn btn--ghost" href="#colors">Learn More</a>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section id="typography" class="card">
+        <div class="h-03">Typography</div>
+        <div class="section-grid">
+          <div>
+            <div class="d-01">D–01</div>
+            <div class="h-01 mt-5">H–01 Headline</div>
+            <div class="h-02 mt-4">H–02 Headline</div>
+            <div class="h-03 mt-4">H–03 Headline</div>
+            <div class="h-04 mt-4">H–04 Headline</div>
+          </div>
+          <div>
+            <p class="b-01">B–01 Body: Establish a Reference Architecture (RA) for an Open Interoperable Common Federated European-scale Energy AI TEF accessible to all the players of the energy ecosystem.</p>
+            <p class="b-02 mt-3">B–02 Body Secondary: Inter embodies modernity, clarity, and accessibility across digital and print.</p>
+            <p class="c-01 mt-3">C–01 Caption: Horizon Europe Grant Agreement No 101172887</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section id="colors" class="card">
+        <div class="h-03">Colors</div>
+        <div class="section-grid">
+          <div>
+            <div class="b-01">Primary & Secondary</div>
+            <div class="mt-3" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;">
+              <div class="card bg-dark text-white"><div class="b-02">#202020</div><div class="c-01" style="opacity:.8">Primary</div></div>
+              <div class="card bg-purple text-white"><div class="b-02">#C83BD0</div><div class="c-01" style="opacity:.8">Secondary</div></div>
+              <div class="card bg-pink text-white"><div class="b-02">#EE597E</div><div class="c-01" style="opacity:.8">Secondary</div></div>
+              <div class="card bg-orange text-white"><div class="b-02">#FF985B</div><div class="c-01" style="opacity:.8">Secondary</div></div>
+              <div class="card bg-white"><div class="b-02">#FFFFFF</div><div class="c-01" style="opacity:.8">Neutral</div></div>
+            </div>
+          </div>
+          <div>
+            <div class="b-01">Gradients</div>
+            <div class="mt-3 card bg-brand-gradient text-white">Brand Gradient</div>
+            <div class="mt-3 card bg-brand-gradient-3 text-white">Brand Gradient 3</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auth (Login / Register) -->
+      <section id="auth" class="card">
+        <div class="h-03">Authentication</div>
+        <div class="section-grid">
+          <form class="card">
+            <div class="h-04">Log in</div>
+            <div class="field mt-3">
+              <label class="label" for="login-username">Username</label>
+              <input class="input" id="login-username" placeholder="Username" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="login-password">Password</label>
+              <input class="input" id="login-password" type="password" placeholder="Password" />
+            </div>
+            <div class="mt-4">
+              <button type="button" class="btn btn--secondary">Log in</button>
+              <a href="#register" class="btn btn--ghost">New User: Register here</a>
+            </div>
+          </form>
+
+          <form id="register" class="card">
+            <div class="h-04">Register</div>
+            <div class="field mt-3">
+              <label class="label" for="reg-username">Username</label>
+              <input class="input" id="reg-username" placeholder="Username" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-email">Email</label>
+              <input class="input" id="reg-email" type="email" placeholder="Email" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-first">First name</label>
+              <input class="input" id="reg-first" placeholder="First name" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-last">Last name</label>
+              <input class="input" id="reg-last" placeholder="Last name" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-role">Role</label>
+              <select class="select" id="reg-role">
+                <option>End user</option>
+                <option>Service developer</option>
+                <option>TEF admin</option>
+              </select>
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-org">Organization</label>
+              <input class="input" id="reg-org" placeholder="Organization" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-pass">Password</label>
+              <input class="input" id="reg-pass" type="password" placeholder="Password" />
+            </div>
+            <div class="field mt-3">
+              <label class="label" for="reg-pass2">Password verification</label>
+              <input class="input" id="reg-pass2" type="password" placeholder="Password verification" />
+            </div>
+            <div class="mt-4">
+              <button type="button" class="btn btn--primary">Register</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Service Requests -->
+      <section id="requests" class="card">
+        <div class="h-03">Service Requests</div>
+        <div class="section-grid">
+          <div class="card">
+            <div class="h-04">Add service request</div>
+            <div class="field mt-3"><label class="label" for="sr-title">Title</label><input class="input" id="sr-title" placeholder="Title" /></div>
+            <div class="field mt-3"><label class="label" for="sr-problem">Problem</label><textarea class="textarea" id="sr-problem" placeholder="Problem"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sr-cap">Capabilities</label><textarea class="textarea" id="sr-cap" placeholder="Capabilities"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sr-kpi">KPIs</label><textarea class="textarea" id="sr-kpi" placeholder="KPIs"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sr-data">Data</label><textarea class="textarea" id="sr-data" placeholder="Data"></textarea></div>
+            <div class="mt-4">
+              <button class="btn btn--primary" type="button">Create</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="h-04">My service requests</div>
+            <div class="b-02">5 <span class="c-01">Service requests</span></div>
+            <div class="mt-3">
+              <span class="pill pill--open">Open</span>
+              <span class="pill pill--assigned">Assigned</span>
+              <span class="pill pill--closed">Closed</span>
+            </div>
+            <table class="mt-4">
+              <thead><tr><th>Title</th><th>Status</th><th>Assigned To</th></tr></thead>
+              <tbody>
+                <tr><td>Energy Forecast API</td><td><span class="pill pill--open">Open</span></td><td>-</td></tr>
+                <tr><td>Grid Balance Dashboard</td><td><span class="pill pill--assigned">Assigned</span></td><td>dev1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Proposals -->
+      <section id="proposals" class="card">
+        <div class="h-03">Service Proposals</div>
+        <div class="section-grid">
+          <form class="card">
+            <div class="h-04">Create service proposal</div>
+            <div class="field mt-3"><label class="label" for="sp-title">Title</label><input class="input" id="sp-title" placeholder="Title" /></div>
+            <div class="field mt-3"><label class="label" for="sp-desc">Description</label><textarea class="textarea" id="sp-desc" placeholder="Description"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sp-cap">Capabilities</label><textarea class="textarea" id="sp-cap" placeholder="Capabilities"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sp-kpi">KPIs</label><textarea class="textarea" id="sp-kpi" placeholder="KPIs"></textarea></div>
+            <div class="field mt-3"><label class="label" for="sp-infra">Requires infrastructure</label>
+              <select class="select" id="sp-infra">
+                <option>No</option><option>Yes</option>
+              </select>
+            </div>
+            <div class="field mt-3"><label class="label" for="sp-tef">Related TEF</label><input class="input" id="sp-tef" placeholder="Related TEF" /></div>
+            <div class="field mt-3"><label class="label" for="sp-target">Targets users</label><input class="input" id="sp-target" placeholder="Targets users" /></div>
+            <div class="field mt-3"><label class="label" for="sp-responds">Responds to</label><input class="input" id="sp-responds" placeholder="Responds to" /></div>
+            <div class="mt-4"><button class="btn btn--primary" type="button">Create proposal</button></div>
+          </form>
+
+          <div class="card">
+            <div class="h-04">My services proposals</div>
+            <table class="mt-3">
+              <thead><tr><th>Title</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Load Shedding Planner</td><td>Pending</td><td><button class="btn btn--secondary">Accept</button> <button class="btn btn--ghost">Reject</button></td></tr>
+              </tbody>
+            </table>
+            <div class="field mt-3"><label class="label">Justification</label><textarea class="textarea" placeholder="Reason"></textarea></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiments -->
+      <section id="experiments" class="card">
+        <div class="h-03">Experiments</div>
+        <div class="section-grid">
+          <form class="card">
+            <div class="h-04">Create experiment</div>
+            <div class="field mt-3"><label class="label">Title</label><input class="input" placeholder="Title" /></div>
+            <div class="field mt-3"><label class="label">Description</label><textarea class="textarea" placeholder="Description"></textarea></div>
+            <div class="field mt-3"><label class="label">Datasets required</label>
+              <select class="select" multiple>
+                <option>Dataset 1</option>
+                <option>Dataset 2</option>
+              </select>
+            </div>
+            <div class="field mt-3"><label class="label">Assets required</label>
+              <select class="select" multiple>
+                <option>Asset 1</option>
+                <option>Asset 2</option>
+              </select>
+            </div>
+            <div class="field mt-3"><label class="label">HPC resources</label>
+              <div style="display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:.5rem;">
+                <input class="input" placeholder="CPUs" />
+                <input class="input" placeholder="RAM" />
+                <input class="input" placeholder="GPUs" />
+                <input class="input" placeholder="Disk Space" />
+              </div>
+            </div>
+            <div class="field mt-3"><label class="label">KPIs</label>
+              <div style="display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:.5rem;">
+                <input class="input" placeholder="KPI 1" />
+                <input class="input" placeholder="KPI 2" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <button class="btn btn--primary" type="button">Start Experiment</button>
+              <a class="btn btn--ghost" href="#">Go to workbench</a>
+            </div>
+          </form>
+
+          <div class="card">
+            <div class="h-04">My experiments</div>
+            <table class="mt-3">
+              <thead><tr><th>Title</th><th>Status</th><th>Resources</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Forecast Model A</td><td>In progress</td><td>CPUs:4 RAM:16G GPUs:1 Disk:100G</td><td><button class="btn btn--secondary">End</button></td></tr>
+                <tr><td>Anomaly Detector</td><td>Scheduled</td><td>Ready at 12:00 16/6/2025</td><td><button class="btn btn--ghost">Details</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resource Monitoring -->
+      <section id="resources" class="card">
+        <div class="h-03">Resource Monitoring</div>
+        <div class="section-grid">
+          <div class="card">
+            <div class="h-04">Resource utilization</div>
+            <p class="b-02">Status: <span class="pill pill--open">alive</span></p>
+            <p class="b-02">Queued requests: 3</p>
+            <table class="mt-3">
+              <thead><tr><th>Node</th><th>CPU</th><th>RAM</th><th>GPU</th></tr></thead>
+              <tbody>
+                <tr><td>TEF-1</td><td>63%</td><td>48%</td><td>20%</td></tr>
+                <tr><td>TEF-2</td><td>31%</td><td>52%</td><td>0%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <div class="h-04">Register TEF node</div>
+            <div class="field mt-3"><label class="label">TEF name</label><input class="input" placeholder="TEF name"></div>
+            <div class="field mt-3"><label class="label">Install HPC agent</label><a class="btn btn--ghost" href="#">GUIDE</a></div>
+            <div class="mt-4"><button class="btn btn--primary">Create</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payments -->
+      <section id="payments" class="card">
+        <div class="h-03">Payments</div>
+        <div class="section-grid">
+          <div class="card">
+            <div class="h-04">Payment for experiment “title”</div>
+            <div class="b-01 mt-2">450€</div>
+            <div class="section-grid mt-3">
+              <div>
+                <div class="b-02"><strong>Assets used</strong></div>
+                <table class="mt-2">
+                  <tbody>
+                    <tr><td>Asset 1</td><td>1 Month</td><td>30€</td></tr>
+                    <tr><td>Asset 2</td><td>1 Month</td><td>50€</td></tr>
+                  </tbody>
+                </table>
+                <div class="b-02 mt-3"><strong>Datasets used</strong></div>
+                <table class="mt-2">
+                  <tbody>
+                    <tr><td>Dataset 1</td><td>1 Month</td><td>20€</td></tr>
+                    <tr><td>Dataset 2</td><td>1 Month</td><td>10€</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <div class="b-02"><strong>Resources Used</strong></div>
+                <table class="mt-2">
+                  <tbody>
+                    <tr><td>RAM</td><td>8G</td><td>1 Month</td><td>80€</td></tr>
+                    <tr><td>CPUs</td><td>2</td><td>1 Month</td><td>70€</td></tr>
+                    <tr><td>GPUs</td><td>2</td><td>1 Month</td><td>100€</td></tr>
+                    <tr><td>Disk space</td><td>100G</td><td>1 Month</td><td>90€</td></tr>
+                  </tbody>
+                </table>
+                <div class="b-01 mt-3">Total Amount</div>
+                <button class="btn btn--secondary mt-2">Proceed to payment</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="h-04">TEF admins</div>
+            <p class="b-02">End-Users: 3 · Developers: 5 · Requests: 3 · Proposals: 3 · TEF assets: 3 · TEF admins: 5</p>
+            <p class="c-01">This block mirrors the dashboard counters from the mockups.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Components -->
+      <section id="components" class="card">
+        <div class="h-03">Components</div>
+        <div class="section-grid">
+          <div>
+            <div class="b-01">Buttons - All Sizes</div>
+            <div class="mt-3">
+              <div class="b-02 mb-2">Large (Default)</div>
+              <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a class="btn btn--primary btn--lg" href="#">Primary Large</a>
+                <a class="btn btn--secondary btn--lg" href="#">Secondary Large</a>
+                <a class="btn btn--ghost btn--lg" href="#">Ghost Large</a>
+              </div>
+              <div class="b-02 mb-2">Medium</div>
+              <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                <a class="btn btn--primary btn--md" href="#">Primary Medium</a>
+                <a class="btn btn--secondary btn--md" href="#">Secondary Medium</a>
+                <a class="btn btn--ghost btn--md" href="#">Ghost Medium</a>
+              </div>
+              <div class="b-02 mb-2">Small</div>
+              <div style="display: flex; gap: .5rem; flex-wrap: wrap;">
+                <a class="btn btn--primary btn--sm" href="#">Primary Small</a>
+                <a class="btn btn--secondary btn--sm" href="#">Secondary Small</a>
+                <a class="btn btn--ghost btn--sm" href="#">Ghost Small</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="b-01">Inputs</div>
+            <div class="field mt-3">
+              <label class="label">Text input</label>
+              <input class="input" placeholder="Placeholder">
+            </div>
+            <div class="field mt-3">
+              <label class="label">Select</label>
+              <select class="select"><option>Option A</option><option>Option B</option></select>
+            </div>
+            <div class="field mt-3">
+              <label class="label">Textarea</label>
+              <textarea class="textarea" rows="3" placeholder="Write something..."></textarea>
+            </div>
+            <div class="field mt-3">
+              <label class="label"><input type="checkbox"> Checkbox</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid System Examples -->
+      <section id="grid" class="card">
+        <div class="h-03">Responsive Grid System</div>
+        <div class="b-02 mt-3 mb-4">Responsive grid system from 1 to 12 columns. Automatically adjusts on smaller screens.</div>
+        
+        <div class="b-01 mt-4 mb-3">2 Column Grid</div>
+        <div class="grid grid-2">
+          <div class="card bg-orange text-white">Grid Item 1</div>
+          <div class="card bg-pink text-white">Grid Item 2</div>
+        </div>
+
+        <div class="b-01 mt-4 mb-3">3 Column Grid</div>
+        <div class="grid grid-3">
+          <div class="card bg-purple text-white">Grid Item 1</div>
+          <div class="card bg-orange text-white">Grid Item 2</div>
+          <div class="card bg-pink text-white">Grid Item 3</div>
+        </div>
+
+        <div class="b-01 mt-4 mb-3">4 Column Grid</div>
+        <div class="grid grid-4">
+          <div class="card bg-dark text-white">Item 1</div>
+          <div class="card bg-purple text-white">Item 2</div>
+          <div class="card bg-orange text-white">Item 3</div>
+          <div class="card bg-pink text-white">Item 4</div>
+        </div>
+
+        <div class="b-01 mt-4 mb-3">6 Column Grid</div>
+        <div class="grid grid-6">
+          <div class="card bg-orange text-white">1</div>
+          <div class="card bg-pink text-white">2</div>
+          <div class="card bg-purple text-white">3</div>
+          <div class="card bg-dark text-white">4</div>
+          <div class="card bg-orange text-white">5</div>
+          <div class="card bg-pink text-white">6</div>
+        </div>
+
+        <div class="b-01 mt-4 mb-3">12 Column Grid</div>
+        <div class="grid grid-12">
+          <div class="card bg-orange text-white c-01">1</div>
+          <div class="card bg-pink text-white c-01">2</div>
+          <div class="card bg-purple text-white c-01">3</div>
+          <div class="card bg-dark text-white c-01">4</div>
+          <div class="card bg-orange text-white c-01">5</div>
+          <div class="card bg-pink text-white c-01">6</div>
+          <div class="card bg-purple text-white c-01">7</div>
+          <div class="card bg-dark text-white c-01">8</div>
+          <div class="card bg-orange text-white c-01">9</div>
+          <div class="card bg-pink text-white c-01">10</div>
+          <div class="card bg-purple text-white c-01">11</div>
+          <div class="card bg-dark text-white c-01">12</div>
+        </div>
+
+        <div class="b-02 mt-4" style="opacity: 0.8;">
+          <strong>Responsive Behavior:</strong><br>
+          • 12-9 columns → 6 columns on tablets<br>
+          • 8-4 columns → 3 columns on small tablets<br>
+          • 3+ columns → 2 columns on mobile<br>
+          • 2+ columns → 1 column on small mobile
+        </div>
+      </section>
+
+      <footer class="c-01" style="opacity:.7">
+        This project has received funding from European Union's Horizon Europe Research and Innovation programme under the Grant Agreement No 101172887
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
