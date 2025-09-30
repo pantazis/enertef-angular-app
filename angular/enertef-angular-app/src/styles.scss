@@ -340,14 +340,15 @@ a:hover { text-decoration: underline; }
 
 .sidebar{
   position: sticky; 
-  top: 60px; /* Position below top bar */
+  top: var(--nav-height); /* Position below top bar */
   align-self: start;
-  height: calc(100vh - 60px); /* Subtract top bar height */
+  height: calc(100vh - var(--nav-height) ); /* Subtract top bar height */
   padding: var(--s-6) var(--s-4);
   border-right: 1px solid rgba(0,0,0,.08);
   background: var(--color-orange);
   overflow:auto;
   padding-left: 1.25rem; /* Align with top bar padding */
+  box-sizing: border-box;
 }
 .brand{
   display:flex; align-items:center; gap: .75rem; margin-bottom: var(--s-5);
